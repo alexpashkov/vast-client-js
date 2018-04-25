@@ -22,28 +22,37 @@
   "engines": {
     "node": "8.9.4"
   },
-  "main": "src/index.js",
+  "main": "dist/vast-client.cjs.js",
+  "module": "dist/vast-client.esm.js",
+  "browser": "dist/vast-client.umd.js",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --reporter spec test/*.js",
-    "build": "webpack",
+    "build": "rollup -c",
     "precommit": "pretty-quick --staged"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.3",
-    "babel-plugin-transform-object-assign": "^6.22.0",
-    "babel-preset-env": "^1.6.1",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
     "husky": "^0.14.3",
     "mocha": "^3.4.2",
     "prettier": "^1.11.1",
     "pretty-quick": "^1.4.1",
+    "rollup": "^0.58.2",
+    "rollup-plugin-babel": "^3.0.4",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-uglify": "^3.0.0",
     "should": "^11.2.1",
-    "sinon": "^2.3.6",
-    "webpack": "^4.0.1",
-    "webpack-cli": "^2.0.9"
+    "sinon": "^2.3.6"
   },
   "dependencies": {
     "path": "^0.12.7",
-    "xmldom": "~0.1.27"
-  }
+    "xmldom": "^0.1.27"
+  },
+  "files": [
+    "dist"
+  ]
 }

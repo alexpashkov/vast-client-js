@@ -71,7 +71,7 @@ Read the [**2.0 migration guide**](docs/api/2.0-migration.md) to update your pro
 ## Support and compatibility
 The library is 100% written in JavaScript and the source code uses modern features like `es6 modules`. Make sure your environment supports these features, or transpile the library when bundling your project.
 
-A pre-bundled version of VAST Client JS is available: [`vast-client.js`](vast-client.js). You can add the script directly to your page and access the library's components through the `VAST` object.
+Pre-bundled versions of VAST Client JS are available in the [`dist`](dist) folder.
 
 ## Build / Contribute
 
